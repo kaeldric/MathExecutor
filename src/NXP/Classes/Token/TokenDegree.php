@@ -47,7 +47,7 @@ class TokenDegree extends AbstractOperator
     {
         $op2 = array_pop($stack);
         $op1 = array_pop($stack);
-        $result = $op1->getValue() ** $op2->getValue();
+        $result = pow($op1->getValue(), $op2->getValue());
 
         return new TokenNumber($result);
     }
